@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+
+# 添加其他要忽略的文件或目录
+.idea/
+.vscode/

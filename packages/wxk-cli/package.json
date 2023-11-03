@@ -1,0 +1,22 @@
+{
+  "name": "wxk-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wxk": "node ./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "wxk": "./bin/index.js"
+  },
+  "dependencies": {
+    "copy-dir": "^1.3.0",
+    "inquirer": "8.2.5",
+    "mustache": "^4.2.0",
+    "ora": "5.4.1",
+    "yargs": "^17.7.2"
+  }
+}
