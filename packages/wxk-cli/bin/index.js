@@ -24,7 +24,7 @@ yargs.command(
         path.resolve(process.cwd(), `./src/pages/${name}/index.js`)
       )
       if (isMkdirExists) {
-        console.log(`${name}/index.js文件已经存在`)
+        console.log(`${name}/index.js文件已经存在!`)
       } else {
         copyTemplate(
           path.resolve(__dirname, `./template/${type}/index.tpl`),
