@@ -9,7 +9,6 @@ const ora = require('ora')
 const inquirer = require('inquirer')
 const fs = require('fs-extra') // 引入fs-extra
 
-
 function downLoadTemplate(template, dest, projectName) {
   const loading = ora('正在下载模版...')
   loading.start()

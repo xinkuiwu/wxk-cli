@@ -15,6 +15,7 @@ function getGitReposList(username) {
     })
     res.on('end', () => {
       const list = JSON.parse(data)
+      // 根据需求配置
       resolve(list.map(item => ({ // 组合成模版所需要的name，value结构
         name: item.name,
         value: 'https://github.com:${username}/${item.name}'
