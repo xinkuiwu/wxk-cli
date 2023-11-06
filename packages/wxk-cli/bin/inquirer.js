@@ -1,4 +1,6 @@
 const inquirer = require('inquirer')
+const templates = require("./templates")
+const { getGitReposList } = require('./api.js') // 动态获取gitlab repo列表
 
 function inquirerPrompt(argv) {
   const {name} = argv
@@ -7,7 +9,7 @@ function inquirerPrompt(argv) {
       {
         type: 'input',
         name: 'name',
-        message: '模板名称',
+        message: '模板文件名称',
         default: name,
         validate: function (val) {
           if(!/^[a-zA-Z]+$/.test(val)) {
@@ -37,6 +39,12 @@ function inquirerPrompt(argv) {
         message: '使用什么框架开发',
         choices: ['vue','react'],
         name: 'frame'
+      },
+      {
+        type: 'list',
+        name: 'template',
+        message: '请选择下载模板',
+        choices: templates
       }
     ]).then(answers => {
       const {frame} = answers
